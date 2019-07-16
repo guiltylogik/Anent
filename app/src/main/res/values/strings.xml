@@ -1,6 +1,6 @@
 <resources>
-    <string name="app_name">Anent: ALC 4 Phase 1</string>
-    <string name="action_settings">Settings</string>
+    <string name="app_name">Anent</string>
+    <string name="app_title">Anent: ALC 4 Phase 1</string>
     <string name="header">Welcome to ALC 4.0</string>
     <string name="subHeader">Phase 1 Challenge</string>
     <string name="alc">About ALC</string>
@@ -8,10 +8,12 @@
     <string name="title_activity_profile">My Profile</string>
     <string name="title_activity_web_view">About ALC</string>
     <string name="profile_picture_alt">Profile Picture</string>
-    <string name="username">Ifesinachi Chukwuemeka</string>
+    <string name="username">Ifesinachi J. Chukwuemeka</string>
     <string name="user_name">User Name</string>
     <string name="track_view">Track: Android</string>
     <string name="phone">Phone Number: +233558055070</string>
     <string name="email">Email: j.cyxtus@gmail.com</string>
+    <string name="slack_username">Slack Username: @ifechi</string>
     <string name="country">Country: Ghana</string>
+    <string name="copy">\u00A9 ALC 4.0 Phase 1 Challenge.</string>
 </resources>
