@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="bar">#1D2A72</color>
-    <color name="btColor">#354CEC</color>
+    <color name="btColor">#445AE7</color>
+    <color name="subColor">#4B9BFD</color>
+    <color name="spColor">#303F9F</color>
+    <color name="rpColor">#0B0D22</color>
+    <color name="white">#FFFFFF</color>
 </resources>

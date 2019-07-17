@@ -8,126 +8,209 @@
     tools:context=".ProfileActivity"
     tools:showIn="@layout/activity_profile">
 
-    <ImageView
-        android:id="@+id/profilePic"
-        android:layout_width="194dp"
-        android:layout_height="256dp"
-        android:layout_marginStart="60dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:contentDescription="@string/profile_picture_alt"
-        android:src="@drawable/img"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/imgCard"
+        android:layout_width="252dp"
+        android:layout_height="280dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="4dp"
         app:layout_constraintBottom_toTopOf="@+id/copy"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.05"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/nameField"
-        android:layout_width="429dp"
-        android:layout_height="54dp"
+        <ImageView
+            android:id="@+id/profilePic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            android:contentDescription="@string/profile_picture_alt"
+            android:src="@drawable/img"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/bodyCard"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        android:layout_marginTop="40dp"
-        android:layout_marginEnd="32dp"
-        android:ems="10"
-        android:fontFamily="@font/yellowtail"
-        android:hint="@string/user_name"
-        android:text="@string/username"
-        android:textAlignment="center"
-        android:textColor="#0A244E"
-        android:textSize="38sp"
-        android:textStyle="bold"
-        android:typeface="serif"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="4dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/profilePic"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintStart_toEndOf="@+id/imgCard"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/track_textView"
+        <TextView
+            android:id="@+id/nameField"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="4dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="4dp"
+            android:ems="10"
+            android:fontFamily="@font/yellowtail"
+            android:hint="@string/user_name"
+            android:text="@string/username"
+            android:textAlignment="center"
+            android:textColor="#0A244E"
+            android:textSize="36sp"
+            android:textStyle="bold"
+            android:typeface="serif"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/trackCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:fontFamily="@font/aclonica"
-        android:text="@string/track_view"
-        android:textAlignment="textStart"
-        android:textColor="#0A244E"
-        android:textSize="18sp"
-        android:typeface="monospace"
-        app:layout_constraintEnd_toEndOf="@+id/nameField"
-        app:layout_constraintStart_toStartOf="@+id/nameField"
-        app:layout_constraintTop_toTopOf="@+id/divider" />
+        android:layout_marginTop="4dp"
+        app:layout_constraintEnd_toEndOf="@+id/bodyCard"
+        app:layout_constraintStart_toStartOf="@+id/bodyCard"
+        app:layout_constraintTop_toBottomOf="@+id/bodyCard">
 
-    <TextView
-        android:id="@+id/phone"
+        <TextView
+            android:id="@+id/track_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginBottom="12dp"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/track_view"
+            android:textAlignment="textStart"
+            android:textColor="#0A244E"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/phoneCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/aclonica"
-        android:text="@string/phone"
-        android:textAlignment="textStart"
-        android:textColor="#0A244E"
-        android:textSize="18sp"
-        android:typeface="monospace"
-        app:layout_constraintEnd_toEndOf="@+id/track_textView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/track_textView"
-        app:layout_constraintTop_toBottomOf="@+id/track_textView" />
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/trackCard"
+        app:layout_constraintStart_toStartOf="@+id/trackCard"
+        app:layout_constraintTop_toBottomOf="@+id/trackCard">
+
+        <TextView
+            android:id="@+id/phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/phone"
+            android:textAlignment="textStart"
+            android:textColor="#0A244E"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </com.google.android.material.card.MaterialCardView>
 
 
-    <TextView
-        android:id="@+id/email_textView"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/emailCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/aclonica"
-        android:text="@string/email"
-        android:textAlignment="textStart"
-        android:textColor="#0A244E"
-        android:textSize="18sp"
-        android:typeface="monospace"
-        app:layout_constraintEnd_toEndOf="@+id/slack_textView"
-        app:layout_constraintStart_toStartOf="@+id/slack_textView"
-        app:layout_constraintTop_toBottomOf="@+id/slack_textView" />
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/phoneCard"
+        app:layout_constraintStart_toStartOf="@+id/phoneCard"
+        app:layout_constraintTop_toBottomOf="@+id/phoneCard">
 
-    <TextView
-        android:id="@+id/slack_textView"
+
+        <TextView
+            android:id="@+id/email_textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/email"
+            android:textAlignment="textStart"
+            android:textColor="#0A244E"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/slackCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:fontFamily="@font/aclonica"
-        android:text="@string/slack_username"
-        android:textAlignment="textStart"
-        android:textColor="#0A244E"
-        android:textSize="18sp"
-        android:typeface="monospace"
-        app:layout_constraintEnd_toEndOf="@+id/phone"
-        app:layout_constraintStart_toStartOf="@+id/phone"
-        app:layout_constraintTop_toBottomOf="@+id/phone" />
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/emailCard"
+        app:layout_constraintStart_toStartOf="@+id/emailCard"
+        app:layout_constraintTop_toBottomOf="@+id/emailCard">
 
-    <TextView
-        android:id="@+id/country"
+        <TextView
+            android:id="@+id/slack_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/slack_username"
+            android:textAlignment="textStart"
+            android:textColor="#0A244E"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/countryCard"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:layout_marginBottom="8dp"
-        android:fontFamily="@font/aclonica"
-        android:text="@string/country"
-        android:textAlignment="textStart"
-        android:textColor="#0A244E"
-        android:textSize="18sp"
-        android:typeface="monospace"
-        app:layout_constraintBottom_toTopOf="@+id/copy"
-        app:layout_constraintEnd_toEndOf="@+id/email_textView"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/email_textView"
-        app:layout_constraintTop_toBottomOf="@+id/email_textView"
-        app:layout_constraintVertical_bias="0.0" />
+        android:layout_marginTop="2dp"
+        app:layout_constraintEnd_toEndOf="@+id/slackCard"
+        app:layout_constraintStart_toStartOf="@+id/slackCard"
+        app:layout_constraintTop_toBottomOf="@+id/slackCard">
+
+
+        <TextView
+            android:id="@+id/country"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="8dp"
+            android:fontFamily="@font/aclonica"
+            android:text="@string/country"
+            android:textAlignment="textStart"
+            android:textColor="#0A244E"
+            android:textSize="18sp"
+            android:typeface="monospace"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+    </com.google.android.material.card.MaterialCardView>
+
 
     <TextView
         android:id="@+id/copy"
-        android:layout_width="0dp"
+        android:layout_width="715dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginEnd="8dp"
@@ -143,15 +226,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <View
-        android:id="@+id/divider"
-        android:layout_width="0dp"
-        android:layout_height="1dp"
-        android:layout_marginEnd="8dp"
-        android:background="@drawable/rounded_btn"
-        app:layout_constraintEnd_toEndOf="@+id/nameField"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/nameField"
-        app:layout_constraintTop_toBottomOf="@+id/nameField" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

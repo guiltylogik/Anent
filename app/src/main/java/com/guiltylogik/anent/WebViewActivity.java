@@ -2,14 +2,13 @@ package com.guiltylogik.anent;
 
 import android.net.http.SslError;
 import android.os.Bundle;
-
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.appcompat.widget.Toolbar;
-
 import android.webkit.SslErrorHandler;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 
 public class WebViewActivity extends AppCompatActivity {
 
@@ -25,11 +24,12 @@ public class WebViewActivity extends AppCompatActivity {
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
 
+
         webView = findViewById(R.id.webView);
-        webView.setWebViewClient(new WebViewClient(){
+        webView.setWebViewClient(new WebViewClient() {
 
             @Override
-            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error){
+            public void onReceivedSslError(WebView view, SslErrorHandler handler, SslError error) {
                 handler.proceed();
             }
         });
@@ -43,9 +43,9 @@ public class WebViewActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
 
-        if(webView.canGoBack()){
+        if (webView.canGoBack()) {
             webView.goBack();
-        }else{
+        } else {
             super.onBackPressed();
         }
     }
